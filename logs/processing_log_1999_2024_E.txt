@@ -1,0 +1,647 @@
+STOCK DATA PROCESSING LOG
+==================================================
+Processing Date: 2025-09-18 12:50:25
+Year Range: 1999 - 2024
+Target Days Per Year: 250
+
+
+============================================================
+SYMBOL: ICPAX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 72
+  Total Days Trimmed: 6
+  Total Zero Returns: 405
+  Total Zero Prices: 72
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    187   63     0        66       63         Padded 63 days with zeros due to insufficient data
+2000   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        8        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        3        0          OK
+2003   success    250   0      0        9        0          OK
+2004   success    250   0      0        10       0          OK
+2005   success    251   0      1        16       0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        16       0          OK
+2007   success    249   1      0        12       1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        14       0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        26       0          OK
+2010   success    250   0      0        25       0          OK
+2011   success    251   0      1        7        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        17       2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        14       0          OK
+2014   success    250   0      0        9        0          OK
+2015   success    250   0      0        11       0          OK
+2016   success    251   0      1        14       0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        19       0          OK
+2018   success    249   1      0        19       1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        20       0          OK
+2020   success    251   0      1        11       0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        17       0          OK
+2022   success    250   0      0        5        0          OK
+2023   success    249   1      0        18       1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        18       0          OK
+
+============================================================
+SYMBOL: VGENX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 74
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        2        0          OK
+2000   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        10       4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        7        0          OK
+2003   success    250   0      0        3        0          OK
+2004   success    250   0      0        5        0          OK
+2005   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        0        0          OK
+2007   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        2        0          OK
+2010   success    250   0      0        3        0          OK
+2011   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        4        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        3        0          OK
+2014   success    250   0      0        0        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        1        0          OK
+2018   success    249   1      0        4        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        2        0          OK
+2020   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        5        0          OK
+2022   success    250   0      0        0        0          OK
+2023   success    249   1      0        6        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        4        0          OK
+
+============================================================
+SYMBOL: FANAX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 73
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        2        0          OK
+2000   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        12       4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        4        0          OK
+2003   success    250   0      0        3        0          OK
+2004   success    250   0      0        3        0          OK
+2005   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        4        0          OK
+2007   success    249   1      0        4        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        1        0          OK
+2010   success    250   0      0        2        0          OK
+2011   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        3        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        2        0          OK
+2014   success    250   0      0        3        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        2        0          OK
+2018   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        3        0          OK
+2020   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        0        0          OK
+2022   success    250   0      0        4        0          OK
+2023   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        2        0          OK
+
+============================================================
+SYMBOL: FSENX
+============================================================
+Summary:
+  Total Years Processed: 52
+  Successful: 52 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 18
+  Total Days Trimmed: 12
+  Total Zero Returns: 125
+  Total Zero Prices: 18
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        4        0          OK
+2000   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        8        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        1        0          OK
+2003   success    250   0      0        4        0          OK
+2004   success    250   0      0        6        0          OK
+2005   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        2        0          OK
+2007   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        0        0          OK
+2010   success    250   0      0        0        0          OK
+2011   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        2        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        2        0          OK
+2014   success    250   0      0        2        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        3        0          OK
+2018   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        2        0          OK
+2020   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        0        0          OK
+2022   success    250   0      0        4        0          OK
+2023   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        4        0          OK
+1999   success    250   0      0        4        0          OK
+2000   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        8        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        1        0          OK
+2003   success    250   0      0        4        0          OK
+2004   success    250   0      0        6        0          OK
+2005   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        2        0          OK
+2007   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        0        0          OK
+2010   success    250   0      0        0        0          OK
+2011   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        2        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        2        0          OK
+2014   success    250   0      0        2        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        3        0          OK
+2018   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        2        0          OK
+2020   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        0        0          OK
+2022   success    250   0      0        4        0          OK
+2023   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        4        0          OK
+
+============================================================
+SYMBOL: RYEIX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 86
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        12       0          OK
+2000   success    251   0      1        6        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        8        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        4        0          OK
+2003   success    250   0      0        7        0          OK
+2004   success    250   0      0        5        0          OK
+2005   success    251   0      1        6        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        1        0          OK
+2007   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        4        0          OK
+2010   success    250   0      0        6        0          OK
+2011   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        2        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        3        0          OK
+2014   success    250   0      0        4        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        1        0          OK
+2018   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        2        0          OK
+2020   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        0        0          OK
+2022   success    250   0      0        0        0          OK
+2023   success    249   1      0        1        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        0        0          OK
+
+============================================================
+SYMBOL: IEFCX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 25 years
+  No Data Available: 1 years
+  Errors: 0 years
+  Total Days Added (padding): 287
+  Total Days Trimmed: 5
+  Total Zero Returns: 367
+  Total Zero Prices: 287
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   no_data    0     250    0        250      250        No data available for IEFCX in 1999
+2000   success    222   28     0        29       28         Padded 28 days with zeros due to insufficient data
+2001   success    246   4      0        8        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        5        0          OK
+2003   success    250   0      0        4        0          OK
+2004   success    250   0      0        7        0          OK
+2005   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        1        0          OK
+2007   success    249   1      0        6        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        1        0          OK
+2010   success    250   0      0        1        0          OK
+2011   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        2        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        1        0          OK
+2014   success    250   0      0        3        0          OK
+2015   success    250   0      0        3        0          OK
+2016   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        3        0          OK
+2018   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        6        0          OK
+2020   success    251   0      1        6        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        7        0          OK
+2022   success    250   0      0        3        0          OK
+2023   success    249   1      0        5        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        5        0          OK
+
+============================================================
+SYMBOL: ENPIX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 25 years
+  No Data Available: 1 years
+  Errors: 0 years
+  Total Days Added (padding): 374
+  Total Days Trimmed: 5
+  Total Zero Returns: 463
+  Total Zero Prices: 374
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   no_data    0     250    0        250      250        No data available for ENPIX in 1999
+2000   success    135   115    0        116      115        Padded 115 days with zeros due to insufficient data
+2001   success    246   4      0        7        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        10       0          OK
+2003   success    250   0      0        10       0          OK
+2004   success    250   0      0        6        0          OK
+2005   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        3        0          OK
+2007   success    249   1      0        5        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        2        0          OK
+2010   success    250   0      0        3        0          OK
+2011   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        2        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        3        0          OK
+2014   success    250   0      0        3        0          OK
+2015   success    250   0      0        0        0          OK
+2016   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        3        0          OK
+2018   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        3        0          OK
+2020   success    251   0      1        10       0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        3        0          OK
+2022   success    250   0      0        2        0          OK
+2023   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        8        0          OK
+
+============================================================
+SYMBOL: ENPSX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 25 years
+  No Data Available: 1 years
+  Errors: 0 years
+  Total Days Added (padding): 374
+  Total Days Trimmed: 5
+  Total Zero Returns: 467
+  Total Zero Prices: 374
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   no_data    0     250    0        250      250        No data available for ENPSX in 1999
+2000   success    135   115    0        117      115        Padded 115 days with zeros due to insufficient data
+2001   success    246   4      0        7        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        10       0          OK
+2003   success    250   0      0        8        0          OK
+2004   success    250   0      0        5        0          OK
+2005   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        4        0          OK
+2007   success    249   1      0        5        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        3        0          OK
+2010   success    250   0      0        2        0          OK
+2011   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        5        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        1        0          OK
+2014   success    250   0      0        3        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        5        0          OK
+2018   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        2        0          OK
+2020   success    251   0      1        10       0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        3        0          OK
+2022   success    250   0      0        2        0          OK
+2023   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        10       0          OK
+
+============================================================
+SYMBOL: PEO
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 137
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        18       0          OK
+2000   success    251   0      1        13       0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        11       4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        3        0          OK
+2003   success    250   0      0        7        0          OK
+2004   success    250   0      0        2        0          OK
+2005   success    251   0      1        7        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        3        0          OK
+2007   success    249   1      0        4        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        0        0          OK
+2010   success    250   0      0        3        0          OK
+2011   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        4        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        2        0          OK
+2014   success    250   0      0        3        0          OK
+2015   success    250   0      0        3        0          OK
+2016   success    251   0      1        9        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        12       0          OK
+2018   success    249   1      0        5        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        4        0          OK
+2020   success    251   0      1        5        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        4        0          OK
+2022   success    250   0      0        1        0          OK
+2023   success    249   1      0        5        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        6        0          OK
+
+============================================================
+SYMBOL: FNRCX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 80
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        3        0          OK
+2000   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        8        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        4        0          OK
+2003   success    250   0      0        5        0          OK
+2004   success    250   0      0        3        0          OK
+2005   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        3        0          OK
+2007   success    249   1      0        4        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        3        0          OK
+2010   success    250   0      0        2        0          OK
+2011   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        7        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        1        0          OK
+2014   success    250   0      0        1        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        4        0          OK
+2018   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        4        0          OK
+2020   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        1        0          OK
+2022   success    250   0      0        2        0          OK
+2023   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        2        0          OK
+
+============================================================
+SYMBOL: FANIX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 72
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        3        0          OK
+2000   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        10       4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        4        0          OK
+2003   success    250   0      0        3        0          OK
+2004   success    250   0      0        3        0          OK
+2005   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        2        0          OK
+2007   success    249   1      0        4        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        0        0          OK
+2010   success    250   0      0        0        0          OK
+2011   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        7        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        0        0          OK
+2014   success    250   0      0        3        0          OK
+2015   success    250   0      0        0        0          OK
+2016   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        3        0          OK
+2018   success    249   1      0        4        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        4        0          OK
+2020   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        0        0          OK
+2022   success    250   0      0        4        0          OK
+2023   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        2        0          OK
+
+============================================================
+SYMBOL: FNARX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 101
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        6        0          OK
+2000   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        11       4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        6        0          OK
+2003   success    250   0      0        9        0          OK
+2004   success    250   0      0        9        0          OK
+2005   success    251   0      1        5        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        5        0          OK
+2007   success    249   1      0        1        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        3        0          OK
+2010   success    250   0      0        2        0          OK
+2011   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        3        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        5        0          OK
+2014   success    250   0      0        1        0          OK
+2015   success    250   0      0        1        0          OK
+2016   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        3        0          OK
+2018   success    249   1      0        5        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        6        0          OK
+2020   success    251   0      1        4        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        1        0          OK
+2022   success    250   0      0        2        0          OK
+2023   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        3        0          OK
+
+============================================================
+SYMBOL: FAGNX
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 74
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        4        0          OK
+2000   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        7        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        3        0          OK
+2003   success    250   0      0        4        0          OK
+2004   success    250   0      0        3        0          OK
+2005   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        1        0          OK
+2007   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        1        0          OK
+2010   success    250   0      0        3        0          OK
+2011   success    251   0      1        2        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        4        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        2        0          OK
+2014   success    250   0      0        3        0          OK
+2015   success    250   0      0        2        0          OK
+2016   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        3        0          OK
+2018   success    249   1      0        4        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        2        0          OK
+2020   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        1        0          OK
+2022   success    250   0      0        4        0          OK
+2023   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        3        0          OK
+
+============================================================
+SYMBOL: SPY
+============================================================
+Summary:
+  Total Years Processed: 26
+  Successful: 26 years
+  No Data Available: 0 years
+  Errors: 0 years
+  Total Days Added (padding): 9
+  Total Days Trimmed: 6
+  Total Zero Returns: 30
+  Total Zero Prices: 9
+
+Year-by-Year Details:
+Year   Status     Orig  Added  Trimmed  ZeroRet  ZeroPrice  Notes
+--------------------------------------------------------------------------------
+1999   success    250   0      0        0        0          OK
+2000   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2001   success    246   4      0        4        4          Padded 4 days with zeros due to insufficient data
+2002   success    250   0      0        0        0          OK
+2003   success    250   0      0        2        0          OK
+2004   success    250   0      0        3        0          OK
+2005   success    251   0      1        3        0          Trimmed 1 oldest days to reach 250 days
+2006   success    250   0      0        0        0          OK
+2007   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2008   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2009   success    250   0      0        0        0          OK
+2010   success    250   0      0        1        0          OK
+2011   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2012   success    248   2      0        4        2          Padded 2 days with zeros due to insufficient data
+2013   success    250   0      0        3        0          OK
+2014   success    250   0      0        0        0          OK
+2015   success    250   0      0        0        0          OK
+2016   success    251   0      1        1        0          Trimmed 1 oldest days to reach 250 days
+2017   success    250   0      0        1        0          OK
+2018   success    249   1      0        3        1          Padded 1 days with zeros due to insufficient data
+2019   success    250   0      0        0        0          OK
+2020   success    251   0      1        0        0          Trimmed 1 oldest days to reach 250 days
+2021   success    250   0      0        0        0          OK
+2022   success    250   0      0        1        0          OK
+2023   success    249   1      0        2        1          Padded 1 days with zeros due to insufficient data
+2024   success    250   0      0        0        0          OK
+
+============================================================
+OVERALL SUMMARY
+============================================================
+Total Symbols Processed: 14
+Total Symbol-Year Combinations: 390
+Successful Fetches: 387
+No Data Available: 3
+Errors: 0
+Total Days Added Across All: 1206
+Total Days Trimmed Across All: 87
+Total Zero Returns Across All: 2554
+Total Zero Prices Across All: 1206
