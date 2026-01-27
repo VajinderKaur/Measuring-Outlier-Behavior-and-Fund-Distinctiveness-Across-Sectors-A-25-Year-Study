@@ -92,6 +92,24 @@ Residuals are sorted and divided into 10 quantiles (1-10):
 - **Quantile 1**: Bottom 10% (closest to market behavior)
 - **Quantile 10**: Top 10% (farthest deviation from market)
 
+#### Why Deciles Instead of K-Means?
+
+We chose quantile-based classification over clustering methods like k-means for several important reasons:
+
+1. **Simplicity and Interpretability**: Quantiles provide a direct, intuitive measure of relative performance. Each decile represents exactly 10% of the distribution, making results easy to communicate and understand.
+
+2. **Consistent Grouping**: Unlike k-means, which can produce uneven cluster sizes, quantile segmentation ensures even distribution across all time periods, allowing for fair comparisons across years and sectors.
+
+3. **No Iterative Optimization**: K-means requires iterative optimization and can converge to different solutions depending on initialization. Quantiles are deterministic and reproducible.
+
+4. **Direct Distance Measurement**: Quantiles naturally capture each fund's relative distance from the market by ranking residuals according to their deviation from the benchmark. This directly aligns with our goal of measuring performance divergence.
+
+5. **Temporal Stability**: For time series analysis, quantiles maintain consistent interpretation across periods, whereas k-means cluster boundaries can shift unpredictably over time.
+
+6. **Small Sample Robustness**: With only 13 funds per sector, k-means could create unstable clusters. Quantiles work well even with limited data.
+
+In essence, we prioritize measuring **relative position** (how far from the market) rather than **geometric similarity** (clustering in feature space), making quantiles the natural choice for this performance-based analysis.
+
 ### 3. Hamming Distance
 Normalized Hamming distance measures how often two funds occupy different quantiles:
 
