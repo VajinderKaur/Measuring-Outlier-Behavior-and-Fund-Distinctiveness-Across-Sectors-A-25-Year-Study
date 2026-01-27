@@ -44,7 +44,7 @@ Finance/
 ├── logs/                # Processing logs for each step
 ├── main.py              # Step 1: Data collection script
 ├── residuals.py         # Step 2: Residual computation script
-├── single_fund.py       # Utility for individual fund analysis
+├── single_fund.py       # Utility for individual fund data collection
 ├── main.ipynb           # Step 3: Quantile classification & visualization
 ├── requirements.txt     # Python dependencies
 └── results.txt          # Summary results about the most diversifieed fund
