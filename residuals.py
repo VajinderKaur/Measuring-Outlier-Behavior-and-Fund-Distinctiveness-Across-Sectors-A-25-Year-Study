@@ -5,9 +5,9 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
 # Paths
-fund_folder = 'Funds/energy'
-spy_path = 'Benchmarks/SPY_1999_2024 copy.csv'
-output_folder = 'residuals/residuals_e'
+fund_folder = 'Funds/healthcare'
+spy_path = 'Benchmarks/SPY_1999_2025.csv'
+output_folder = 'residuals/residuals_healthcare'
 
 os.makedirs(output_folder, exist_ok=True)
 

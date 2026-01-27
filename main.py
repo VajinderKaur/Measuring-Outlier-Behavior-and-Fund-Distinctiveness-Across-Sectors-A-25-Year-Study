@@ -276,18 +276,15 @@ def create_log_file(log_data, folder_name, start_year, end_year):
 if __name__ == "__main__":
     TARGET_DAYS = 250   
     START_YEAR = 1999
-    END_YEAR = 2024
-    SECTOR_NAME = "Energy"  
+    END_YEAR = 2025
+    SECTOR_NAME = "tech"  
     # Define the mutual funds/stocks for this sector
-    SECTOR_FUNDS = [#'KTCAX', 'RAGTX', 'WSTAX', 'MTCAX','SLMCX','RSIFX','USTCX', 
-    #'FSPTX', 'FSCSX', 'FSELX','FDCPX','FADTX','SHGTX', 'ROGSX','RYELX', 'ICTEX', 'PGKAX']
-        #'BULIX','FRUAX','MMUFX','PRUAX','PCUFX','FKUTX','EVUAX',         #Utilities
-        #'GAUAX','RYUTX','PRUZX', 'FSUTX','FIUIX','FUGAX', 'GASFX', 'ICTUX']
-    #'CSRIX', 'CSEIX', 'FRESX', 'DFREX', 'TRREX', 'PHRAX', 'FRESX',  #RE
-    #'DPREX', 'FREAX', 'IARAX', 
-    #'RPFRX', 'SOAAX', 'STMDX', 'SUSIX']
-    #"FSHCX","PHSTX","SWHFX","ETHSX","VGHCX","PRHSX","FSPHX","SHSAX","PHLAX", "FSMEX","SHPAX","FACDX","FBDIX" #healthcare
-    "ICPAX","VGENX","FANAX","FSENX","RYEIX","IEFCX","ENPIX", "ENPSX","PEO", "FNRCX","FANIX", "FNARX", "FSENX", "FAGNX"]
+    SECTOR_FUNDS = ['KTCAX', 'WSTAX', 'MTCAX','SLMCX','RSIFX', 
+    'FSPTX', 'FSCSX', 'FSELX','FDCPX','SHGTX', 'ROGSX', 'ICTEX'] #tech
+        #'BULIX','FRUAX','MMUFX','PRUAX','FKUTX','EVUAX', 'FSUTX','FIUIX', 'FUGAX','GASFX', 'ICTUX'] #Utilities
+    #'CSRIX', 'CSEIX', 'FRESX', 'DFREX', 'TRREX', 'PHRAX','DPREX', 'FREAX', 'IARAX', 'RPFRX', 'SOAAX', 'STMDX'] #RE
+    #"FSHCX","PHSTX","SWHFX","ETHSX","VGHCX","PRHSX","FSPHX","SHSAX","PHLAX", "FSMEX","SHPAX","FACDX","FBDIX"] #healthcare
+    #"ICPAX","VGENX","FSENX","RYEIX","IEFCX","ENPIX", "ENPSX","FNARX", "PRNEX","FRNRX"] #energy
     
     # Define sector indices and benchmarks
     SECTOR_INDICES = [ 'SPY'
