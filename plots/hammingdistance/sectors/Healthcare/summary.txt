@@ -1,0 +1,17 @@
+
+Overall Hamming distance (all funds): 0.798
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+FBDIX        0.778061                 0.019558
+FSHCX        0.780612                 0.017007
+VGHCX        0.783163                 0.014456
+PRHSX        0.789541                 0.008078
+ETHSX        0.795918                 0.001701
+PHSTX        0.802296                -0.004677
+FSMEX        0.815051                -0.017432
+FSPHX        0.815051                -0.017432
+FACDX        0.818878                -0.021259
+
+Fund contributing the most diversification: FBDIX

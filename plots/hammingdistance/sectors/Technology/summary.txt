@@ -1,0 +1,19 @@
+
+Overall Hamming distance (all funds): 0.751
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+FSELX        0.731746                 0.018903
+RSIFX        0.738889                 0.011760
+FDCPX        0.742857                 0.007792
+SHGTX        0.742857                 0.007792
+FSCSX        0.750794                -0.000144
+ICTEX        0.751587                -0.000938
+ROGSX        0.752381                -0.001732
+FSPTX        0.758730                -0.008081
+MTCAX        0.761111                -0.010462
+SLMCX        0.761905                -0.011255
+KTCAX        0.764286                -0.013636
+
+Fund contributing the most diversification: FSELX

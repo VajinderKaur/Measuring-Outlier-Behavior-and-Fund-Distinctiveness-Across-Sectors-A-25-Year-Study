@@ -1,0 +1,15 @@
+
+Overall Hamming distance (all funds): 0.718
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+PRNEX        0.688095                 0.029592
+ICPAX        0.697619                 0.020068
+VGENX        0.697619                 0.020068
+FSENX        0.728571                -0.010884
+FNARX        0.733333                -0.015646
+FRNRX        0.735714                -0.018027
+RYEIX        0.742857                -0.025170
+
+Fund contributing the most diversification: PRNEX

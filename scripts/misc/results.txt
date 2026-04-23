@@ -1,0 +1,95 @@
+RE
+Overall Hamming distance (all funds): 0.563
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+DPREX        0.545238                 0.017749
+STMDX        0.551587                 0.011400
+SOAAX        0.552381                 0.010606
+RPFRX        0.558730                 0.004257
+PHRAX        0.562698                 0.000289
+FREAX        0.565079                -0.002092
+CSEIX        0.565873                -0.002886
+DFREX        0.568254                -0.005267
+IARAX        0.569841                -0.006854
+FRESX        0.573810                -0.010823
+TRREX        0.579365                -0.016378
+
+Fund contributing the most diversification: DPREX
+
+Utilities
+
+Overall Hamming distance (all funds): 0.598
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+MMUFX        0.592326                 0.005713
+PRUAX        0.592326                 0.005713
+EVUAX        0.593925                 0.004114
+GASFX        0.594724                 0.003315
+FUGAX        0.596032                 0.002007
+FIUIX        0.596323                 0.001716
+FKUTX        0.597922                 0.000118
+ICTUX        0.598721                -0.000682
+FSUTX        0.604317                -0.006277
+FRUAX        0.605116                -0.007077
+BULIX        0.606715                -0.008675
+
+Fund contributing the most diversification: MMUFX
+
+TECH
+Overall Hamming distance (all funds): 0.735
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+FSCSX        0.719841                 0.015224
+ICTEX        0.719841                 0.015224
+FSELX        0.723810                 0.011255
+RSIFX        0.727778                 0.007287
+ROGSX        0.730952                 0.004113
+SLMCX        0.742063                -0.006999
+KTCAX        0.742857                -0.007792
+SHGTX        0.743651                -0.008586
+MTCAX        0.744444                -0.009380
+FDCPX        0.745238                -0.010173
+FSPTX        0.745238                -0.010173
+
+Fund contributing the most diversification: FSCSX
+
+HC
+Overall Hamming distance (all funds): 0.734
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+ETHSX        0.720663                 0.013464
+FBDIX        0.720663                 0.013464
+FSHCX        0.723214                 0.010913
+VGHCX        0.727041                 0.007086
+PHSTX        0.727041                 0.007086
+FSMEX        0.735969                -0.001842
+FACDX        0.747449                -0.013322
+PRHSX        0.751276                -0.017149
+FSPHX        0.753827                -0.019700
+
+Fund contributing the most diversification: ETHSX
+
+Energy
+
+Overall Hamming distance (all funds): 0.658
+
+Diversification impact (largest drop = most diversification):
+       H_without_fund  drop_in_diversification
+Fund                                          
+PRNEX        0.607143                 0.051020
+ICPAX        0.619048                 0.039116
+VGENX        0.645238                 0.012925
+RYEIX        0.671429                -0.013265
+FRNRX        0.683333                -0.025170
+FSENX        0.690476                -0.032313
+FNARX        0.690476                -0.032313
+
+Fund contributing the most diversification: PRNEX
