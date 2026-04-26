@@ -2,54 +2,51 @@ import pandas as pd
 import os
 import glob
 import statsmodels.api as sm
-import matplotlib.pyplot as plt
 
-# Paths
-fund_folder = 'Funds/healthcare'
-spy_path = 'Benchmarks/SPY_1999_2025.csv'
-output_folder = 'residuals/residuals_healthcare'
+# Get project root (one level above scripts/)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-os.makedirs(output_folder, exist_ok=True)
+fund_root = os.path.join(BASE_DIR, "funds")
+spy_path = os.path.join(BASE_DIR, "benchmarks", "SPY_1999_2025.csv")
+output_root = os.path.join(BASE_DIR, "residuals")
 
-# Read SPY data
+os.makedirs(output_root, exist_ok=True)
+
+# Read SPY once
 spy_df = pd.read_csv(spy_path, parse_dates=['Date'])
-spy_df = spy_df[['Date', 'Daily_Return']]
-spy_df = spy_df.rename(columns={'Daily_Return': 'SPY_Return'})
+spy_df = spy_df[['Date', 'Daily_Return']].rename(columns={'Daily_Return': 'SPY_Return'})
 
-# For trajectory plotting later
 residuals_all = []
 
-# Loop over each fund file
-for filepath in glob.glob(os.path.join(fund_folder, '*.csv')):
-    fund_name = os.path.basename(filepath).split('_')[0]
+# Loop through all sectors
+for fund_folder in glob.glob(os.path.join(fund_root, '*')):
 
-    # Read fund data
-    fund_df = pd.read_csv(filepath, parse_dates=['Date'])
-    fund_df = fund_df[['Date', 'Daily_Return']]
-    fund_df = fund_df.rename(columns={'Daily_Return': 'Fund_Return'})
+    sector_name = os.path.basename(fund_folder)
+    output_folder = os.path.join(output_root, f'residuals_{sector_name}')
+    os.makedirs(output_folder, exist_ok=True)
 
-    # Merge with SPY on Date
-    df = pd.merge(fund_df, spy_df, on='Date', how='inner')
+    for filepath in glob.glob(os.path.join(fund_folder, '*.csv')):
+        fund_name = os.path.basename(filepath).split('_')[0]
 
-    # Drop missing returns
-    df = df.dropna(subset=['Fund_Return', 'SPY_Return'])
+        fund_df = pd.read_csv(filepath, parse_dates=['Date'])
+        fund_df = fund_df[['Date', 'Daily_Return']].rename(columns={'Daily_Return': 'Fund_Return'})
 
-    # Regression: Fund ~ SPY
-    X = sm.add_constant(df['SPY_Return'])
-    y = df['Fund_Return']
-    model = sm.OLS(y, X).fit()
+        df = pd.merge(fund_df, spy_df, on='Date', how='inner')
+        df = df.dropna(subset=['Fund_Return', 'SPY_Return'])
 
-    # Residuals
-    df['Residual'] = model.resid
+        X = sm.add_constant(df['SPY_Return'])
+        y = df['Fund_Return']
+        model = sm.OLS(y, X).fit()
 
-    # Save residuals per fund
-    df[['Date', 'Fund_Return', 'SPY_Return', 'Residual']].to_csv(
-        os.path.join(output_folder, f'{fund_name}_residuals.csv'), index=False
-    )
+        df['Residual'] = model.resid
 
-    # Add for plotting
-    df['Fund'] = fund_name
-    residuals_all.append(df[['Date', 'Residual', 'Fund']])
+        df[['Date', 'Fund_Return', 'SPY_Return', 'Residual']].to_csv(
+            os.path.join(output_folder, f'{fund_name}_residuals.csv'),
+            index=False
+        )
 
-# Combine all residuals
+        df['Fund'] = fund_name
+        df['Sector'] = sector_name
+        residuals_all.append(df[['Date', 'Residual', 'Fund', 'Sector']])
+
 resid_df = pd.concat(residuals_all, ignore_index=True)

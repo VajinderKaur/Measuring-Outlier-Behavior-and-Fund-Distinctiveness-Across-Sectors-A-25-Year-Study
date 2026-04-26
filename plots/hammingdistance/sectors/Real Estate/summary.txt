@@ -1,19 +1,20 @@
 
-Overall Hamming distance (all funds): 0.639
+Portfolio Index (no normalization):
+I(P) = 8.049587
 
-Diversification impact (largest drop = most diversification):
-       H_without_fund  drop_in_diversification
-Fund                                          
-DPREX        0.620635                 0.018326
-PHRAX        0.628571                 0.010390
-SOAAX        0.631746                 0.007215
-FREAX        0.634921                 0.004040
-TRREX        0.635714                 0.003247
-RPFRX        0.640476                -0.001515
-STMDX        0.642857                -0.003896
-IARAX        0.646032                -0.007071
-CSEIX        0.646032                -0.007071
-FRESX        0.650000                -0.011039
-DFREX        0.651587                -0.012626
+Impact Table:
+       I_without_fund  marginal_impact
+Fund                                  
+DPREX            7.73         0.319587
+PHRAX            7.73         0.319587
+FREAX            7.85         0.199587
+TRREX            7.93         0.119587
+RPFRX            7.97         0.079587
+SOAAX            8.01         0.039587
+IARAX            8.01         0.039587
+STMDX            8.03         0.019587
+CSEIX            8.13        -0.080413
+FRESX            8.13        -0.080413
+DFREX            8.14        -0.090413
 
-Fund contributing the most diversification: DPREX
+Most Diversifying Fund: DPREX

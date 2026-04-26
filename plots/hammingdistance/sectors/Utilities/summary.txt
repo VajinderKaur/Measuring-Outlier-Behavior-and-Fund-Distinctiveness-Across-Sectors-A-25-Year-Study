@@ -1,18 +1,19 @@
 
-Overall Hamming distance (all funds): 0.706
+Portfolio Index (no normalization):
+I(P) = 8.850000
 
-Diversification impact (largest drop = most diversification):
-       H_without_fund  drop_in_diversification
-Fund                                          
-ICTUX        0.690000                 0.015835
-EVUAX        0.694000                 0.011835
-PRUAX        0.698000                 0.007835
-FIUIX        0.701000                 0.004835
-BULIX        0.703000                 0.002835
-MMUFX        0.704000                 0.001835
-FKUTX        0.713000                -0.007165
-GASFX        0.713000                -0.007165
-FUGAX        0.720238                -0.014403
-FSUTX        0.722000                -0.016165
+Impact Table:
+       I_without_fund  marginal_impact
+Fund                                  
+ICTUX        8.543210         0.306790
+EVUAX        8.654321         0.195679
+PRUAX        8.654321         0.195679
+GASFX        8.679012         0.170988
+FIUIX        8.728395         0.121605
+BULIX        8.753086         0.096914
+MMUFX        8.777778         0.072222
+FKUTX        8.814815         0.035185
+FSUTX        8.839506         0.010494
+FUGAX        8.962963        -0.112963
 
-Fund contributing the most diversification: ICTUX
+Most Diversifying Fund: ICTUX

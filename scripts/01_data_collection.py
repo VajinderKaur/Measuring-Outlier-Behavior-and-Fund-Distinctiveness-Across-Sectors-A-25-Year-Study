@@ -284,7 +284,7 @@ if __name__ == "__main__":
         #'BULIX','FRUAX','MMUFX','PRUAX','FKUTX','EVUAX', 'FSUTX','FIUIX', 'FUGAX','GASFX', 'ICTUX'] #Utilities
     #'CSRIX', 'CSEIX', 'FRESX', 'DFREX', 'TRREX', 'PHRAX','DPREX', 'FREAX', 'IARAX', 'RPFRX', 'SOAAX', 'STMDX'] #RE
     #"FSHCX","PHSTX","SWHFX","ETHSX","VGHCX","PRHSX","FSPHX","SHSAX","PHLAX", "FSMEX","SHPAX","FACDX","FBDIX"] #healthcare
-    #"ICPAX","VGENX","FSENX","RYEIX","IEFCX","ENPIX", "ENPSX","FNARX", "PRNEX","FRNRX"] #energy
+    #"ICPAX","VGENX","FSENX","RYEIX","IEFCX","ENPIX", "ENPSX","FNARX", "PRNEX"] #energy ,"FRNRX"
     
     # Define sector indices and benchmarks
     SECTOR_INDICES = [ 'SPY'
