@@ -14,6 +14,14 @@ plot_path = os.path.join(BASE_DIR, "plots", "boxplots")
 
 os.makedirs(plot_path, exist_ok=True)
 
+SECTOR_COLORS = {
+    "energy": "#1f77b4",       # blue
+    "tech": "#ff7f0e",         # orange
+    "healthcare": "#2ca02c",   # green
+    "utilities": "#d62728",    # red
+    "re": "#9467bd"            # purple
+}
+
 # ---------------------------
 # Load all precomputed L2 files
 # ---------------------------
@@ -43,6 +51,8 @@ sector_order = sorted(final_df['Sector'].unique())
 y_min = final_df['L2_Distance'].quantile(0.01)
 y_max = final_df['L2_Distance'].quantile(0.99)
 
+sector_order = ["energy", "tech", "healthcare", "utilities", "re"]
+
 # ---------------------------
 # Plot
 # ---------------------------
@@ -53,8 +63,12 @@ sns.boxplot(
     x='Sector',
     y='L2_Distance',
     order=sector_order,
-    width=0.6,            # tighter, cleaner boxes
-    fliersize=3           # smaller outlier dots
+    hue='Sector', 
+    palette=SECTOR_COLORS,
+    width=0.6,
+    fliersize=3,
+    dodge=False,   
+    legend=False   
 )
 
 # ---------------------------

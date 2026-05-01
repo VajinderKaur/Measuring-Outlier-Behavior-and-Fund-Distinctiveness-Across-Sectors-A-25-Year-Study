@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 # -------------------------
 # Load fund quantiles
 # -------------------------
-df = pd.read_csv("../clusters/energy_quantiles_byyear.csv")
+df = pd.read_csv("../clusters/tech_quantiles_byyear.csv")
 
-selected_funds = ["FNARX", "FRNRX"]
+selected_funds = ["ICTEX", "ROGSX"]
 df = df[df["Fund"].isin(selected_funds)]
 
 df = df.sort_values(["Fund", "Year"])
@@ -86,6 +86,6 @@ plt.grid(True, linestyle="--", alpha=0.6)
 # Save output
 os.makedirs("../plots/example", exist_ok=True)
 plt.tight_layout()
-plt.savefig("../plots/example/energy_frnrx_fnarx_spy.jpg", dpi=1200, bbox_inches="tight")
+plt.savefig("../plots/example/tech_example_spy.jpg", dpi=1200, bbox_inches="tight")
 
 plt.show()

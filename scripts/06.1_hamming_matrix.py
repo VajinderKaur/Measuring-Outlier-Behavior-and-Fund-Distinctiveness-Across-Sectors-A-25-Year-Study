@@ -30,9 +30,7 @@ def hamming(s1, s2):
     return mismatch_count, mask.sum()
 
 # -----------------------------
-# PORTFOLIO INDEX (NO L NORMALIZATION)
-# I(P) = sum w_i w_j h_ij
-# equal weights: w_i = 1/M
+# PORTFOLIO INDEX
 # -----------------------------
 def portfolio_index(trajs):
     funds = list(trajs.columns)
@@ -58,15 +56,10 @@ for sector, file in sector_files.items():
     out_dir = os.path.join(base_out, sector)
     os.makedirs(out_dir, exist_ok=True)
 
-    # -----------------------------
     # LOAD DATA
-    # -----------------------------
     df = pd.read_csv(file)
     df['Quantile'] = pd.to_numeric(df['Quantile'], errors='coerce')
 
-    # -----------------------------
-    # TRAJECTORIES (Fund-Year)
-    # -----------------------------
     yearly = (
         df.groupby(['Year', 'Fund'], as_index=False)['Quantile']
           .agg(lambda x: x.mode().iloc[0])
@@ -74,18 +67,13 @@ for sector, file in sector_files.items():
 
     traj = yearly.pivot(index='Year', columns='Fund', values='Quantile').sort_index()
 
-    # -----------------------------
-    # FULL PORTFOLIO INDEX
-    # -----------------------------
+    # PORTFOLIO INDEX
     I_all = portfolio_index(traj)
 
-    # -----------------------------
-    # IMPACT TABLE (MARGINAL CONTRIBUTION)
-    # -----------------------------
+    # IMPACT TABLE
     impact = []
 
     for fund in traj.columns:
-
         reduced = traj.drop(columns=fund)
         I_minus = portfolio_index(reduced)
 
@@ -106,7 +94,7 @@ for sector, file in sector_files.items():
     best_fund = impact_df.index[0]
 
     # -----------------------------
-    # PAIRWISE HAMMING MATRIX
+    # HAMMING MATRIX
     # -----------------------------
     funds = list(traj.columns)
     Mmat = pd.DataFrame(index=funds, columns=funds, dtype=float)
@@ -121,17 +109,52 @@ for sector, file in sector_files.items():
     Mmat.to_csv(os.path.join(out_dir, "hamming_matrix.csv"))
 
     # -----------------------------
-    # HEATMAP
+    # HEATMAP WITH VALUES (UPDATED)
     # -----------------------------
     plt.figure(figsize=(10, 8))
-    plt.imshow(Mmat.values, aspect='auto')
-    plt.xticks(range(len(funds)), funds, rotation=90)
-    plt.yticks(range(len(funds)), funds)
-    plt.colorbar(label="Hamming Distance (raw count)")
-    plt.title(f"{sector} - Hamming Matrix")
-    plt.tight_layout()
 
-    plt.savefig(os.path.join(out_dir, "heatmap.jpg"), dpi=300)
+    data = Mmat.values
+
+    # Light sequential colormap — low = white/yellow, high = dark red
+    im = plt.imshow(data, aspect='auto', cmap='YlOrRd')
+
+    plt.xticks(range(len(funds)), funds, rotation=45, ha='right', fontsize=9)
+    plt.yticks(range(len(funds)), funds, fontsize=9)
+
+    cbar = plt.colorbar(im)
+    cbar.set_label("Hamming Distance (raw count)", fontsize=10)
+
+    plt.title(f"{sector} — Hamming Distance Matrix", fontsize=13, fontweight='bold', pad=12)
+
+    # -----------------------------
+    # ADD NUMBERS INSIDE CELLS
+    # -----------------------------
+    vmin = np.nanmin(data[data > 0]) if np.any(data > 0) else 0
+    vmax = np.nanmax(data)
+    mid  = (vmin + vmax) / 2
+
+    for i in range(len(funds)):
+        for j in range(len(funds)):
+            val = data[i, j]
+
+            if np.isnan(val):
+                continue
+
+            # Black text on light cells, white on dark cells
+            color = "white" if val > mid else "black"
+
+            plt.text(
+                j, i,
+                f"{int(val)}",
+                ha="center",
+                va="center",
+                color=color,
+                fontsize=10,
+                fontweight='bold'
+            )
+
+    plt.tight_layout()
+    plt.savefig(os.path.join(out_dir, "heatmap.jpg"), dpi=300, bbox_inches='tight')
     plt.close()
 
     # -----------------------------

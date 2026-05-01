@@ -27,6 +27,14 @@ sector_files = {
     "RE": "re_quantiles_byyear.csv"
 }
 
+SECTOR_COLORS = {
+    "Energy": "#1f77b4",       # blue
+    "Tech": "#ff7f0e",         # orange
+    "Healthcare": "#2ca02c",   # green
+    "Utilities": "#d62728",    # red
+    "RE": "#9467bd"            # purple
+}
+
 # -----------------------------
 # HELPERS
 # -----------------------------
@@ -151,7 +159,12 @@ for sector, file in sector_files.items():
     # PLOT: YEAR MODE
     # -----------------------------
     plt.figure(figsize=(10, 5))
-    plt.plot(year_mode.index, year_mode.values, marker="o")
+    plt.plot(
+    year_mode.index,
+    year_mode.values,
+    marker="o",
+    color=SECTOR_COLORS[sector]
+    )
 
     plt.title(f"{sector} - Yearly Cluster Mode")
     plt.xlabel("Year")
@@ -167,7 +180,13 @@ for sector, file in sector_files.items():
 plt.figure(figsize=(12, 6))
 
 for sector, series in sector_year_modes.items():
-    plt.plot(series.index, series.values, marker="o", label=sector)
+    plt.plot(
+        series.index,
+        series.values,
+        marker="o",
+        label=sector,
+        color=SECTOR_COLORS[sector]
+    )
 
 plt.title("Sector Cluster Regime Evolution (Yearly Mode)")
 plt.xlabel("Year")
