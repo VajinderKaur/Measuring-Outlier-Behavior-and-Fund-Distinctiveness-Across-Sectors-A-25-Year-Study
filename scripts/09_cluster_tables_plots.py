@@ -17,68 +17,55 @@ os.makedirs(OUT_TABLE_DIR, exist_ok=True)
 os.makedirs(OUT_PLOT_DIR, exist_ok=True)
 
 # -----------------------------
-# INPUT FILES
+# INPUT FILES (updated to correct names)
 # -----------------------------
 sector_files = {
-    "Energy": "energy_quantiles_byyear.csv",
-    "Tech": "tech_quantiles_byyear.csv",
-    "Healthcare": "healthcare_quantiles_byyear.csv",
-    "Utilities": "utilities_quantiles_byyear.csv",
-    "RE": "re_quantiles_byyear.csv"
+    "Energy": "energy_quantiles_global.csv",
+    "Technology": "technology_quantiles_global.csv",
+    "Healthcare": "healthcare_quantiles_global.csv",
+    "Utilities": "utilities_quantiles_global.csv",
+    "Real Estate": "real_estate_quantiles_global.csv"
 }
 
 SECTOR_COLORS = {
     "Energy": "#1f77b4",       # blue
-    "Tech": "#ff7f0e",         # orange
+    "Technology": "#ff7f0e",   # orange
     "Healthcare": "#2ca02c",   # green
     "Utilities": "#d62728",    # red
-    "RE": "#9467bd"            # purple
+    "Real Estate": "#9467bd"   # purple
 }
 
 # -----------------------------
 # HELPERS
 # -----------------------------
 def mode_value(series):
-    """
-    Deterministic mode:
-    - highest frequency wins
-    - tie → smallest cluster value wins
-    """
+    """Deterministic mode: highest frequency wins, tie → smallest cluster value"""
     arr = np.asarray(series)
     counts = Counter(arr)
-
     max_freq = max(counts.values())
     candidates = [k for k, v in counts.items() if v == max_freq]
-
     return min(candidates)
 
-
 def compute_switches(series):
+    """Number of times fund changes cluster"""
     arr = np.asarray(series)
     if len(arr) <= 1:
         return 0
     return np.sum(arr[1:] != arr[:-1])
 
-
 def compute_inertia(series):
-    """
-    Longest consecutive run in same cluster
-    """
+    """Longest consecutive run in same cluster"""
     arr = np.asarray(series)
-
     if len(arr) == 0:
         return 0
-
     max_streak = 1
     current = 1
-
     for i in range(1, len(arr)):
         if arr[i] == arr[i - 1]:
             current += 1
         else:
             max_streak = max(max_streak, current)
             current = 1
-
     return max(max_streak, current)
 
 # -----------------------------
@@ -93,39 +80,39 @@ for sector, file in sector_files.items():
     print(f"Processing {sector}...")
 
     path = os.path.join(CLUSTER_DIR, file)
+    
+    if not os.path.exists(path):
+        print(f"  File not found: {path}")
+        continue
+    
     df = pd.read_csv(path)
-
+    
+    # Rename column to match script
+    df = df.rename(columns={'Decile_Cluster': 'Quantile'})
+    
+    # Remove SPY if present
+    df = df[df['Fund'] != 'SPY']
+    
     df["Year"] = df["Year"].astype(int)
     df["Quantile"] = df["Quantile"].astype(int)
 
-    # -----------------------------
     # PIVOT: Year x Fund
-    # -----------------------------
     pivot = df.pivot(index="Year", columns="Fund", values="Quantile")
     pivot = pivot.sort_index()
 
-    # -----------------------------
     # YEAR MODE (for plot)
-    # -----------------------------
     year_mode = pivot.apply(lambda x: mode_value(x.dropna()), axis=1)
     pivot["YEAR_MODE"] = year_mode
-
     sector_year_modes[sector] = year_mode
 
-    # -----------------------------
     # FUND STATISTICS
-    # -----------------------------
     fund_stats = {}
-
     for fund in pivot.columns:
         if fund == "YEAR_MODE":
             continue
-
         series = pivot[fund].dropna().values
-
         if len(series) == 0:
             continue
-
         fund_stats[fund] = {
             "mode": mode_value(series),
             "median": float(np.median(series)),
@@ -133,14 +120,11 @@ for sector, file in sector_files.items():
             "inertia": int(compute_inertia(series))
         }
 
-    # -----------------------------
     # SUMMARY ROWS
-    # -----------------------------
     summary_rows = pd.DataFrame(
         index=["mode", "median", "switches", "inertia"],
         columns=pivot.columns
     )
-
     for fund in fund_stats:
         summary_rows.loc["mode", fund] = fund_stats[fund]["mode"]
         summary_rows.loc["median", fund] = fund_stats[fund]["median"]
@@ -149,52 +133,38 @@ for sector, file in sector_files.items():
 
     final_table = pd.concat([pivot, summary_rows])
 
-    # -----------------------------
     # SAVE TABLE
-    # -----------------------------
     out_path = os.path.join(OUT_TABLE_DIR, f"{sector}_trajectory.csv")
     final_table.to_csv(out_path)
+    print(f"  Saved: {out_path}")
 
-    # -----------------------------
-    # PLOT: YEAR MODE
-    # -----------------------------
+    # PLOT: YEAR MODE (individual sector)
     plt.figure(figsize=(10, 5))
-    plt.plot(
-    year_mode.index,
-    year_mode.values,
-    marker="o",
-    color=SECTOR_COLORS[sector]
-    )
-
-    plt.title(f"{sector} - Yearly Cluster Mode")
+    plt.plot(year_mode.index, year_mode.values, marker="o", color=SECTOR_COLORS[sector])
+    plt.title(f"{sector} - Yearly Cluster Mode (1999-2025)")
     plt.xlabel("Year")
     plt.ylabel("Mode Cluster")
-
     plot_path = os.path.join(OUT_PLOT_DIR, f"{sector}_mode.png")
     plt.savefig(plot_path, bbox_inches="tight")
     plt.close()
+    print(f"  Saved plot: {plot_path}")
 
 # -----------------------------
 # COMBINED PLOT (ALL SECTORS)
 # -----------------------------
 plt.figure(figsize=(12, 6))
-
 for sector, series in sector_year_modes.items():
-    plt.plot(
-        series.index,
-        series.values,
-        marker="o",
-        label=sector,
-        color=SECTOR_COLORS[sector]
-    )
+    plt.plot(series.index, series.values, marker="o", label=sector, color=SECTOR_COLORS[sector])
 
-plt.title("Sector Cluster Regime Evolution (Yearly Mode)")
+plt.title("Sector Cluster Regime Evolution (Yearly Mode) 1999-2025")
 plt.xlabel("Year")
 plt.ylabel("Mode Cluster")
 plt.legend()
+plt.grid(alpha=0.3)
 
 combined_path = os.path.join(OUT_PLOT_DIR, "all_sectors_year_mode.png")
 plt.savefig(combined_path, bbox_inches="tight")
 plt.close()
 
+print(f"\n✓ Saved combined plot: {combined_path}")
 print("Done: trajectory tables + plots generated.")

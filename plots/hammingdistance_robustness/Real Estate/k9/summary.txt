@@ -1,0 +1,41 @@
+
+============================================================
+SECTOR: Real Estate (k=9 clusters)
+============================================================
+
+Number of funds: 11
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 5.157025
+  Unweighted Index I'(P) [sum of distances]: 624
+  Average pairwise distance (years different): 11.35 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 17.0545
+
+MOST DIVERSE FUND (highest marginal impact):
+  RPFRX (contributes +0.347025)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  TRREX (contributes -0.102975)
+
+IMPACT TABLE (sorted by marginal impact):
+       I_without_fund  marginal_impact
+Fund                                  
+RPFRX            4.81         0.347025
+DPREX            4.91         0.247025
+SOAAX            5.08         0.077025
+PHRAX            5.09         0.067025
+STMDX            5.11         0.047025
+IARAX            5.11         0.047025
+FREAX            5.16        -0.002975
+CSEIX            5.19        -0.032975
+DFREX            5.20        -0.042975
+FRESX            5.24        -0.082975
+TRREX            5.26        -0.102975
+
+FILES SAVED:
+  /projectnb/aisearch/Finance/plots/hammingdistance_robustness/Real Estate/k9/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg

@@ -1,0 +1,6 @@
+Sector,Decile (Baseline),KMeans,Ward
+Healthcare,FBDIX,FBDIX,FBDIX
+Energy,PRNEX,PRNEX,PRNEX
+Technology,FSELX,FSELX,FSELX
+Utilities,PRUAX,MMUFX,MMUFX
+Real Estate,RPFRX,RPFRX,DPREX

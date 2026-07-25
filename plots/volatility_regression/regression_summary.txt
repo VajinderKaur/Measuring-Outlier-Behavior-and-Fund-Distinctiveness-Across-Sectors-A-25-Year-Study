@@ -1,0 +1,33 @@
+                             OLS Regression Results                             
+================================================================================
+Dep. Variable:     Portfolio_Volatility   R-squared:                       0.996
+Model:                              OLS   Adj. R-squared:                  0.996
+Method:                   Least Squares   F-statistic:                 7.967e+04
+Date:                  Sat, 18 Jul 2026   Prob (F-statistic):               0.00
+Time:                          15:08:21   Log-Likelihood:                 11084.
+No. Observations:                  2500   AIC:                        -2.215e+04
+Df Residuals:                      2492   BIC:                        -2.211e+04
+Df Model:                             7                                         
+Covariance Type:              nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+const                   0.0284      0.002     15.187      0.000       0.025       0.032
+I_P                    -0.0015   8.91e-05    -16.959      0.000      -0.002      -0.001
+Avg_Constituent_Vol     0.8988      0.007    137.301      0.000       0.886       0.912
+N_Funds                -0.0002   6.69e-05     -2.610      0.009      -0.000   -4.34e-05
+Healthcare             -0.0091      0.001    -15.821      0.000      -0.010      -0.008
+Real Estate             0.0022      0.000      7.004      0.000       0.002       0.003
+Technology             -0.0011      0.000     -5.792      0.000      -0.001      -0.001
+Utilities              -0.0067      0.001    -10.142      0.000      -0.008      -0.005
+==============================================================================
+Omnibus:                       99.472   Durbin-Watson:                   2.063
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              292.249
+Skew:                          -0.085   Prob(JB):                     3.46e-64
+Kurtosis:                       4.666   Cond. No.                     1.01e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.01e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

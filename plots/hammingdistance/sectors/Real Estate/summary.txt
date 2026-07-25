@@ -1,20 +1,41 @@
 
-Portfolio Index (no normalization):
-I(P) = 8.049587
+============================================================
+SECTOR: Real Estate
+============================================================
 
-Impact Table:
+Number of funds: 11
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 5.628099
+  Unweighted Index I'(P) [sum of distances]: 681
+  Average pairwise distance (years different): 12.38 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 20.0000
+
+MOST DIVERSE FUND (highest marginal impact):
+  RPFRX (contributes +0.288099)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  TRREX (contributes -0.161901)
+
+IMPACT TABLE (sorted by marginal impact):
        I_without_fund  marginal_impact
 Fund                                  
-DPREX            7.73         0.319587
-PHRAX            7.73         0.319587
-FREAX            7.85         0.199587
-TRREX            7.93         0.119587
-RPFRX            7.97         0.079587
-SOAAX            8.01         0.039587
-IARAX            8.01         0.039587
-STMDX            8.03         0.019587
-CSEIX            8.13        -0.080413
-FRESX            8.13        -0.080413
-DFREX            8.14        -0.090413
+RPFRX            5.34         0.288099
+SOAAX            5.36         0.268099
+DPREX            5.38         0.248099
+STMDX            5.55         0.078099
+DFREX            5.60         0.028099
+FREAX            5.60         0.028099
+CSEIX            5.65        -0.021901
+IARAX            5.65        -0.021901
+PHRAX            5.68        -0.051901
+FRESX            5.69        -0.061901
+TRREX            5.79        -0.161901
 
-Most Diversifying Fund: DPREX
+FILES SAVED:
+  ../plots/hammingdistance/sectors/Real Estate/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg

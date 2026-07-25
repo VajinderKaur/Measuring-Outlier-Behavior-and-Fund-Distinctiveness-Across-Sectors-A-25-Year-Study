@@ -1,0 +1,36 @@
+
+============================================================
+SECTOR: Energy (k=9 clusters)
+============================================================
+
+Number of funds: 6
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 7.527778
+  Unweighted Index I'(P) [sum of distances]: 271
+  Average pairwise distance (years different): 18.07 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 38.0000
+
+MOST DIVERSE FUND (highest marginal impact):
+  PRNEX (contributes +1.447778)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  FSENX (contributes -0.352222)
+
+IMPACT TABLE (sorted by marginal impact):
+       I_without_fund  marginal_impact
+Fund                                  
+PRNEX            6.08         1.447778
+ICPAX            6.92         0.607778
+VGENX            6.92         0.607778
+FNARX            7.68        -0.152222
+RYEIX            7.88        -0.352222
+FSENX            7.88        -0.352222
+
+FILES SAVED:
+  /projectnb/aisearch/Finance/plots/hammingdistance_robustness/Energy/k9/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg

@@ -1,0 +1,29 @@
+================================================================================
+SECTOR: ENERGY
+================================================================================
+Processing Date: 2026-06-04 17:40:17
+Year Range: 1999 - 2025
+Target Days: 252 (UNIQUE dates, Industry Standard)
+Imputation Method: Zero returns for missing days
+
+IMPUTATION STATISTICS:
+----------------------------------------
+Total observations: 47,628
+Matched days (actual data): 47,152
+Imputed days (zero returns): 476
+Overall imputation rate: 1.00%
+Maximum imputation: 65 days (25.8%) in 1999
+
+JUSTIFICATION FOR REVIEWER (Comment #6):
+----------------------------------------
+• 252 UNIQUE days is the industry standard for annualization (CRSP, Bloomberg, S&P)
+• Maximum imputation required: 65 days (25.8%)
+• Zero returns on non-trading days are economically accurate
+• For years with fewer than 252 trading days, synthetic future dates are generated
+• These synthetic dates never match fund data, resulting in zero imputation
+• See imputation_detail and justification_summary CSV files for full transparency
+
+FILES GENERATED:
+  - Returns: energy/*_252days.csv
+  - Imputation detail: imputation_detail_1999_2025.csv
+  - Justification summary: justification_summary_1999_2025.csv

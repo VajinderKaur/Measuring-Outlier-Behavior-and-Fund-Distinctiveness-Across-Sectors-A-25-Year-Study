@@ -1,0 +1,39 @@
+
+============================================================
+SECTOR: Healthcare (k=5 clusters)
+============================================================
+
+Number of funds: 9
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 7.592593
+  Unweighted Index I'(P) [sum of distances]: 615
+  Average pairwise distance (years different): 17.08 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 26.3889
+
+MOST DIVERSE FUND (highest marginal impact):
+  FBDIX (contributes +0.842593)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  FACDX (contributes -0.313657)
+
+IMPACT TABLE (sorted by marginal impact):
+       I_without_fund  marginal_impact
+Fund                                  
+FBDIX        6.750000         0.842593
+FSHCX        7.156250         0.436343
+PRHSX        7.328125         0.264468
+VGHCX        7.437500         0.155093
+FSMEX        7.453125         0.139468
+ETHSX        7.656250        -0.063657
+PHSTX        7.703125        -0.110532
+FSPHX        7.875000        -0.282407
+FACDX        7.906250        -0.313657
+
+FILES SAVED:
+  /projectnb/aisearch/Finance/plots/hammingdistance_robustness/Healthcare/k5/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg

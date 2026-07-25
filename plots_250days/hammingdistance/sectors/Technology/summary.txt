@@ -1,0 +1,20 @@
+
+Portfolio Index (no normalization):
+I(P) = 9.735537
+
+Impact Table:
+       I_without_fund  marginal_impact
+Fund                                  
+FSELX            9.42         0.315537
+RSIFX            9.49         0.245537
+SHGTX            9.52         0.215537
+FDCPX            9.59         0.145537
+FSCSX            9.66         0.075537
+ICTEX            9.66         0.075537
+FSPTX            9.67         0.065537
+ROGSX            9.72         0.015537
+SLMCX            9.73         0.005537
+KTCAX            9.76        -0.024463
+MTCAX            9.80        -0.064463
+
+Most Diversifying Fund: FSELX

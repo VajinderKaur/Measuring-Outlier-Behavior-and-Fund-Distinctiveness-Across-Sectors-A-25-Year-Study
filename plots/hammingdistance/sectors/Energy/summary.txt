@@ -1,15 +1,36 @@
 
-Portfolio Index (no normalization):
-I(P) = 8.583333
+============================================================
+SECTOR: Energy
+============================================================
 
-Impact Table:
+Number of funds: 6
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 7.722222
+  Unweighted Index I'(P) [sum of distances]: 278
+  Average pairwise distance (years different): 18.53 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 41.8667
+
+MOST DIVERSE FUND (highest marginal impact):
+  PRNEX (contributes +1.402222)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  RYEIX (contributes -0.317778)
+
+IMPACT TABLE (sorted by marginal impact):
        I_without_fund  marginal_impact
 Fund                                  
-PRNEX            7.68         0.903333
-ICPAX            8.00         0.583333
-VGENX            8.04         0.543333
-FSENX            8.48         0.103333
-RYEIX            8.60        -0.016667
-FNARX            8.64        -0.056667
+PRNEX            6.32         1.402222
+VGENX            7.16         0.562222
+ICPAX            7.24         0.482222
+FNARX            7.80        -0.077778
+FSENX            7.92        -0.197778
+RYEIX            8.04        -0.317778
 
-Most Diversifying Fund: PRNEX
+FILES SAVED:
+  ../plots/hammingdistance/sectors/Energy/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg

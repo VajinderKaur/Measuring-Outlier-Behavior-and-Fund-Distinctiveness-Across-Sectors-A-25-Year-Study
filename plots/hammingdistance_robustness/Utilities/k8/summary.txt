@@ -1,0 +1,40 @@
+
+============================================================
+SECTOR: Utilities (k=8 clusters)
+============================================================
+
+Number of funds: 10
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 7.530000
+  Unweighted Index I'(P) [sum of distances]: 753
+  Average pairwise distance (years different): 16.73 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 22.5778
+
+MOST DIVERSE FUND (highest marginal impact):
+  MMUFX (contributes +0.394198)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  BULIX (contributes -0.050247)
+
+IMPACT TABLE (sorted by marginal impact):
+       I_without_fund  marginal_impact
+Fund                                  
+MMUFX        7.135802         0.394198
+ICTUX        7.308642         0.221358
+FUGAX        7.382716         0.147284
+EVUAX        7.395062         0.134938
+PRUAX        7.456790         0.073210
+FSUTX        7.481481         0.048519
+FIUIX        7.530864        -0.000864
+GASFX        7.543210        -0.013210
+FKUTX        7.555556        -0.025556
+BULIX        7.580247        -0.050247
+
+FILES SAVED:
+  /projectnb/aisearch/Finance/plots/hammingdistance_robustness/Utilities/k8/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg

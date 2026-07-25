@@ -1,18 +1,39 @@
 
-Portfolio Index (no normalization):
-I(P) = 10.000000
+============================================================
+SECTOR: Healthcare
+============================================================
 
-Impact Table:
+Number of funds: 9
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 9.629630
+  Unweighted Index I'(P) [sum of distances]: 780
+  Average pairwise distance (years different): 21.67 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 53.6111
+
+MOST DIVERSE FUND (highest marginal impact):
+  FBDIX (contributes +0.567130)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  FSPHX (contributes -0.167245)
+
+IMPACT TABLE (sorted by marginal impact):
        I_without_fund  marginal_impact
 Fund                                  
-FBDIX        9.609375         0.390625
-FSHCX        9.609375         0.390625
-PRHSX        9.703125         0.296875
-VGHCX        9.718750         0.281250
-ETHSX        9.828125         0.171875
-PHSTX        9.859375         0.140625
-FSMEX       10.000000         0.000000
-FSPHX       10.078125        -0.078125
-FACDX       10.187500        -0.187500
+FBDIX        9.062500         0.567130
+VGHCX        9.281250         0.348380
+FSHCX        9.281250         0.348380
+PRHSX        9.406250         0.223380
+FSMEX        9.468750         0.160880
+PHSTX        9.593750         0.035880
+ETHSX        9.625000         0.004630
+FACDX        9.796875        -0.167245
+FSPHX        9.796875        -0.167245
 
-Most Diversifying Fund: FBDIX
+FILES SAVED:
+  ../plots/hammingdistance/sectors/Healthcare/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg

@@ -34,9 +34,9 @@ for folder in glob.glob(os.path.join(residual_path, "residuals_*")):
     # FUND-YEAR L2
     # ---------------------------
     l2_df = (
-        merged.groupby(['Fund', 'Year'])['Residual']
-        .agg(lambda x: np.sqrt((x**2).mean()))
-        .reset_index(name='L2_Distance')
+    merged.groupby(['Fund', 'Year'])['Residual']
+    .agg(lambda x: np.sqrt((x**2).sum()))  
+    .reset_index(name='L2_Norm')
     )
 
     l2_df['Sector'] = sector

@@ -1,0 +1,41 @@
+
+============================================================
+SECTOR: Technology (k=12 clusters)
+============================================================
+
+Number of funds: 11
+Number of years: 27
+
+PORTFOLIO HAMMING INDICES:
+  Weighted Index I(P) [Eq 7, equal weights]: 9.024793
+  Unweighted Index I'(P) [sum of distances]: 1092
+  Average pairwise distance (years different): 19.85 / 27 years
+  Weighted Hamming (|i-j|) [robustness]: 54.5091
+
+MOST DIVERSE FUND (highest marginal impact):
+  FSELX (contributes +0.314793)
+
+LEAST DIVERSE FUND (lowest marginal impact):
+  MTCAX (contributes -0.105207)
+
+IMPACT TABLE (sorted by marginal impact):
+       I_without_fund  marginal_impact
+Fund                                  
+FSELX            8.71         0.314793
+FDCPX            8.73         0.294793
+RSIFX            8.80         0.224793
+SHGTX            8.93         0.094793
+ROGSX            8.94         0.084793
+SLMCX            8.95         0.074793
+ICTEX            8.98         0.044793
+FSCSX            9.01         0.014793
+FSPTX            9.01         0.014793
+KTCAX            9.09        -0.065207
+MTCAX            9.13        -0.105207
+
+FILES SAVED:
+  /projectnb/aisearch/Finance/plots/hammingdistance_robustness/Technology/k12/
+    - impact_table.csv
+    - hamming_matrix.csv
+    - hamming_matrix_weighted.csv
+    - heatmap.jpg
